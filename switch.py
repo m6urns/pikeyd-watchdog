@@ -1,5 +1,4 @@
 import RPi.GPIO as GPIO
-#import pexpect
 import time
 import os
 
@@ -14,7 +13,8 @@ while True:
         time.sleep(0.2)
     else: 
 	if input_state == True:
+           time.sleep(0.5)
            os.spawnl(os.P_NOWAIT, 'pikeyd restart')
-           time.sleep(0.2)
+           
             
 
